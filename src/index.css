@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import "tailwindcss";
+
+body {
+  margin: 0;
+}
+@theme{
+  --font-display: "League Spartan","sans-serif";
+}
+
+.header-title{
+  @apply hover:text-amber-100 hover:underline decoration-2 decoration-amber-300 underline-offset-8
+}
