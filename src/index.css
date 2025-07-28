@@ -3,11 +3,25 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 @theme{
   --font-display: "League Spartan","sans-serif";
+
+}
+@layer utilities {
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#fdd512;
+  }
 }
 
 .header-title{
   @apply hover:text-amber-100 hover:underline decoration-2 decoration-amber-300 underline-offset-8
+}
+
+
+.title-footer{
+ @apply text-4xl font-display mb-10
 }

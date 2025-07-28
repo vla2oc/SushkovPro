@@ -1,14 +1,19 @@
 import './App.css'
-import Hero from './components/Hero'
-import About from './components/Layout/About'
-import Oferta from './components/Layout/Oferta'
+import { Route, Routes } from "react-router-dom"
+import Home from './pages/Home'
+import NaszaRealizacja from './pages/NaszaRealizacja'
+import Onas from './pages/Onas'
+import Kontakt from './pages/Kontakt'
 function App() {
 
   return (
     <>
-      <Hero />
-      <About />
-      <Oferta />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/realizacja' element={<NaszaRealizacja />} />
+        <Route path='/o-nas' element={<Onas />} />
+        <Route path='/kontakt' element={<Kontakt />} />
+      </Routes>
     </>
   )
 }
