@@ -28,14 +28,14 @@ export default function Hero() {
 
             <motion.div ref={ref} initial='hidden' animate={controls} variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { ease: 'easeOut', duration: 1 } } }} >
                 <div className='font-display '>
-                    <h1 className='text-5xl md:text-7xl text-amber-400 flex justify-center align-top mt-40'>Nasze Realizacje</h1>
+                    <h1 className='text-5xl font-bold md:text-7xl text-amber-400 flex justify-center align-top mt-40'>Nasze Realizacje</h1>
                 </div>
                 <div className='flex md:gap-50 justify-center items-center flex-col md:flex-row '>
                     <FeaturesWork />
                     <FeaturesWork />
                 </div>
                 <div className='flex justify-center mt-5 items-center'>
-                    <Button title="Więcej" />
+                    <Button title="Więcej" link='/realizacja' />
                 </div>
             </motion.div>
         </>

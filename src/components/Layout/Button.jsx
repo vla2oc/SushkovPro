@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './Button.css'
-export default function Button({ title }) {
+export default function Button({ title, link }) {
     return (
         <>
-            <Link to="/realizacja">
+            <Link to={link}>
                 <button className="cssbuttons-io-button">
                     {title}
                     <div className="icon">

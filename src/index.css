@@ -23,5 +23,9 @@ body {
 
 
 .title-footer{
- @apply text-4xl font-display mb-10
+ @apply text-6xl font-display mb-10
+}
+
+.form-input{
+  @apply w-full py-3 px-2 bg-transparent outline-none border-0 border-b-2 border-[#bebed2] focus:border-[#78788c] transition-all duration-300
 }

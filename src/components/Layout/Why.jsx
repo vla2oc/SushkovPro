@@ -6,8 +6,9 @@ import zespol from '../../assets/zespol.svg'
 export default function Why() {
     return (
         <>
-            <div className="bg-amber-100 mt-40 md:w-full md:h-150">
-                <div className="md:p-6 flex md:w-220 rounded-4xl  justify-center "><h1 className="font-display text-4xl md:text-7xl mt-10 text-amber-700">Dlaczego SushkovPro?</h1></div>
+            <div className="bg-amber-100 mt-40 w-full py-20">
+                <div className="rounded-4xl  justify-center mx-auto max-w-7xl  ">
+                    <h1 className="font-display text-4xl md:text-7xl mt-10 font-bold text-amber-600">Dlaczego SushkovPro?</h1></div>
                 <div>
                     <div className="flex flex-col md:flex-row items-center justify-center mt-20 gap-20">
                         <WhyCard img={termin} subtitle="Zawsze dotrzymujemy ustalonych terminów. Szanujemy Twój czas — montaż realizujemy sprawnie i zgodnie z harmonogramem." title='Terminowość' />

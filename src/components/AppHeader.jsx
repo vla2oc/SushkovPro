@@ -5,7 +5,7 @@ import bgToyotaMobile from '../assets/bgtoyotaMobile.jpg'
 import { Menu, X } from 'lucide-react';
 import { easeIn, easeInOut, easeOut, motion, AnimatePresence } from 'framer-motion'
 import { fromHalfFloat } from 'three/src/extras/DataUtils.js'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -31,24 +31,59 @@ export default function AppHeader() {
     return (
 
 
-        <header className='w-full absolute font-display  top-1 left-0 z-30 p-4 bg-transparent text-white'>
+        <header className="w-full absolute font-display top-1 left-0 z-30 p-4 bg-transparent text-white">
 
-            <Link to="/"><img src={logo} alt="logo" className='absolute flex w-36 md:w-48 lg:w-56 z-10 right-0 md:left-0 ' /></Link >
+            {/* Логотип */}
+            <Link to="/">
+                <img
+                    src={logo}
+                    alt="logo"
+                    className="absolute flex w-36 md:w-48 lg:w-56 z-10 right-0 md:left-0"
+                />
+            </Link>
 
-            {/* Mobile Nav - Logo + Burger */}
-
-            <div className='flex font-display relative items-start p-4 md:hidden z-20 '>
-                <button className='z-30 relative' onClick={() => setMenuOpen((prev) => !prev)}>
-                    {menuOpen ? <X style={{ color: 'white' }} size={28} /> : <Menu style={{ color: 'white' }} size={28} />}
+            {/* Mobile Nav */}
+            <div className="flex font-display relative items-start p-4 md:hidden z-20">
+                <button
+                    className="z-30 relative"
+                    onClick={() => setMenuOpen(prev => !prev)}
+                >
+                    {menuOpen
+                        ? <X style={{ color: 'white' }} size={28} />
+                        : <Menu style={{ color: 'white' }} size={28} />}
                 </button>
-                <AnimatePresence exitBeforeEnter>
-                    {menuOpen &&
-                        <motion.nav initial={{ height: 0, opacity: 0 }} transition={{ ease: 'easeOut' }} style={{ overflow: 'hidden' }} animate={{ height: 'auto', opacity: 1, }} exit={{ height: 0, opacity: 0 }} className="md:hidden absolute text-white top-0 left-0 w-full bg-black opacity-100 flex flex-col items-center space-y-4 py-5 z-20">
-                            <Link to="/SushkovPro/realizacja" className="header-title">Realizacje</Link>
-                            <a href="#" className="header-title">Oferta</a>
-                            <a href="#" className="header-title">Kontakt</a>
-                            <Link to="/SushkovPro/o-nas" className="header-title">O nas</Link>
-                        </motion.nav>}
+
+                <AnimatePresence>
+                    {menuOpen && (
+                        <>
+                            {/* Полупрозрачный фон */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 0.5 }}
+                                exit={{ opacity: 0 }}
+                                className="fixed inset-0 bg-black z-10"
+                                onClick={() => setMenuOpen(false)}
+                            />
+
+                            {/* Меню */}
+                            <motion.nav
+                                initial={{ x: '100%' }}
+                                animate={{ x: 0 }}
+                                exit={{ x: '100%' }}
+                                transition={{ type: 'tween', duration: 0.3 }}
+                                className="fixed top-0 right-0 h-full w-64 bg-black text-white flex flex-col items-center space-y-6 py-10 z-20 shadow-lg"
+                            >
+                                <Link to="/" onClick={() => setMenuOpen(false)}>
+                                    <img src={logo} alt="logo" className="w-32 mb-6" />
+                                </Link>
+
+                                <Link to="/realizacja" className="header-title" onClick={() => setMenuOpen(false)}>Realizacje</Link>
+                                <Link to="/oferta" className="header-title" onClick={() => setMenuOpen(false)}>Oferta</Link>
+                                <Link to="/kontakt" className="header-title" onClick={() => setMenuOpen(false)}>Kontakt</Link>
+                                <Link to="/o-nas" className="header-title" onClick={() => setMenuOpen(false)}>O nas</Link>
+                            </motion.nav>
+                        </>
+                    )}
                 </AnimatePresence>
             </div>
 
@@ -65,7 +100,7 @@ export default function AppHeader() {
                     <nav>
                         <ul className='flex justify-center gap-10 m-6 text-sm md:text-2xl'>
                             <li>
-                                <Link
+                                <NavLink
                                     to="/realizacja"
                                     className={({ isActive }) =>
                                         isActive
@@ -74,12 +109,22 @@ export default function AppHeader() {
                                     }
                                 >
                                     Realizacje
-                                </Link>
+                                </NavLink>
                             </li>
-                            <li><Link to="/kontakt" className="header-title">Oferta</Link></li>
-                            <li><Link to="/kontakt" className="header-title">Kontakt</Link></li>
+                            <li><NavLink to="/oferta" className={({ isActive }) =>
+                                isActive
+                                    ? 'text-amber-100 underline decoration-2 decoration-amber-300 underline-offset-8'
+                                    : 'text-white hover:text-amber-100 hover:underline decoration-2 decoration-amber-300 underline-offset-8'
+                            }
+                            >Oferta</NavLink></li>
+                            <li><NavLink to="/kontakt" className={({ isActive }) =>
+                                isActive
+                                    ? 'text-amber-100 underline decoration-2 decoration-amber-300 underline-offset-8'
+                                    : 'text-white hover:text-amber-100 hover:underline decoration-2 decoration-amber-300 underline-offset-8'
+                            }
+                            >Kontakt</NavLink></li>
                             <li>
-                                <Link
+                                <NavLink
                                     to="/o-nas"
                                     className={({ isActive }) =>
                                         isActive
@@ -88,7 +133,7 @@ export default function AppHeader() {
                                     }
                                 >
                                     O nas
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </nav>
