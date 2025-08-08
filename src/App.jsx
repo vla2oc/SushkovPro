@@ -5,7 +5,16 @@ import NaszaRealizacja from './pages/NaszaRealizacja'
 import Onas from './pages/Onas'
 import Kontakt from './pages/Kontakt'
 import Oferta from './pages/Oferta'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
 function App() {
+
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <>

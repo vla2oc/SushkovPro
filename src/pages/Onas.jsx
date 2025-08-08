@@ -26,7 +26,7 @@ export default function Onas() {
                     <p className='md:text-xl leading-8 mb-3'>Założyciel naszej firmy zaczynał jako zwykły montażysta. Poznał ten zawód od podstaw, nauczył się, co naprawdę działa, i zrozumiał, że najlepsze efekty osiąga się tylko wtedy, gdy pracuje się z ludźmi, którym się ufa. Tak powstała nasza firma — w Katowicach, w 2023 roku — zbudowana nie na papierze, tylko na relacjach.</p>
                 </div>
             </section>
-            <div className='flex justify-center flex-col gap-20 md:flex-row items-center'>
+            <div className='flex justify-center flex-col md:mt-15 md:mb-20 gap-20 md:flex-row items-center'>
                 <img src={gorlice} alt="" className='w-80 shadow-2xl' />
                 <img src={toyota} alt="" className='w-80 shadow-2xl' />
                 <img src={zawiercie} alt="" className='w-80 shadow-2xl' />
@@ -71,7 +71,7 @@ export default function Onas() {
                     <h1 className="text-4xl text-center md:text-5xl text-amber-200 font-bold mb-6">
                         Zobacz nasze realizacje
                     </h1>
-                    <p className="text-lg md:text-xl leading-8 mb-10">
+                    <p className="text-lg  md:text-xl leading-8 mb-10">
                         Każdy projekt to dla nas coś więcej niż tylko montaż. To efekt współpracy, zaufania i solidnej pracy zespołu. Zobacz, co udało nam się wspólnie stworzyć — od małych zleceń po duże, wymagające realizacje.
                     </p>
                     <Button title="Realizacje" link="/realizacja" />
