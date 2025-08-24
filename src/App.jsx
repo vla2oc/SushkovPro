@@ -7,6 +7,7 @@ import Kontakt from './pages/Kontakt'
 import Oferta from './pages/Oferta'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import OfertPage from './components/Layout/OfertaPage'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/o-nas' element={<Onas />} />
         <Route path='/kontakt' element={<Kontakt />} />
         <Route path='/oferta' element={<Oferta />} />
+        <Route path='/oferta/:id' element={<OfertPage />} />
       </Routes>
     </>
   )

@@ -43,17 +43,17 @@ export default function Kontakt() {
                         <h2 className="text-3xl font-semibold mb-5 text-amber-500 flex items-center gap-2"> <FaAddressBook className='' />Dane Rejestrowe</h2>
                         <ul className="list-disc list-inside space-y-1">
                             <li>SushkovPro Sp. z o.o</li>
-                            <li>Adres: ul. Warszawska 12, 00-001 Chorzów</li>
-                            <li>NIP: 123-456-78-90</li>
+                            <li>Adres: ul. Michała Wolskiego 17, 41-500 Chorzów</li>
+                            <li>NIP: 6272784208</li>
                         </ul>
                     </div>
 
                     <div>
                         <h2 className="text-3xl font-semibold mb-5 text-amber-500 flex items-center gap-2"><FaPhoneSquareAlt />Dane kontaktowe</h2>
                         <ul className="list-disc list-inside space-y-1">
-                            <li>Telefon: +48 123 456 789</li>
+                            <li>Telefon: +48 575 522 097</li>
                             <li>Email: kontakt@firma.pl</li>
-                            <li>Godziny pracy: Pon - Pt: 9:00 - 17:00</li>
+                            <li>Godziny pracy: Pon - Pt: 8:00 - 16:00</li>
                         </ul>
                     </div>
                 </div>
