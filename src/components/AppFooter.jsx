@@ -1,5 +1,7 @@
+import { FaWhatsapp } from 'react-icons/fa6';
 import SushkovPro from '../assets/OnlyLogo.png'
-import { FaClipboardList, FaEnvelope, FaPhoneSquareAlt } from "react-icons/fa";
+
+import { FaClipboardList, FaEnvelope, FaPhoneSquareAlt, FaInstagram, FaFacebook, FaWhatsappSquare } from "react-icons/fa";
 export default function AppFooter() {
     return (
         <div className="bg-amber-300 flex p-8 gap-10 justify-evenly flex-col md:flex-row ">
@@ -22,10 +24,11 @@ export default function AppFooter() {
             </div>
             <div className="col-span-3">
                 <h1 className="title-footer">Social Media</h1>
-                <ul>
-                    <li>dasdasd</li>
-                    <li>dasdasd</li>
-                    <li>dasdasd</li>
+                <ul className='flex flex-row justify-center gap-8'>
+                    <li className='text-6xl  items-center gap-4'><a href="#"><FaInstagram /></a></li>
+                    <li className='text-6xl items-center gap-4'><a href="#"><FaFacebook /></a></li>
+                    <li className='text-6xl items-center gap-4'><a href="#"><FaWhatsappSquare /></a></li>
+
                 </ul>
             </div>
         </div>

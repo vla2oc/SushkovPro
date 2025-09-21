@@ -56,7 +56,6 @@ export default function AppHeader() {
                 <AnimatePresence>
                     {menuOpen && (
                         <>
-                            {/* Полупрозрачный фон */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 0.5 }}
