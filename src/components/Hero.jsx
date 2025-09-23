@@ -12,7 +12,7 @@ export default function Hero() {
             <section style={{ backgroundImage: `url(${bgToyota})` }}
                 className="relative h-screen bg-cover bg-center bg-fixed flex items-end justify-center">
                 <div id='dark-overlay' className='absolute inset-0 bg-black opacity-60  transition-opacity duration-100 z-0'></div>
-                <div className='flex flex-col relative md:top-10'>
+                <div className='flex flex-col relative font-display  md:top-10'>
                     <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3, ease: easeOut }} className="relative z-10 flex flex-col items-center justify-center md:justify-end text-white px-6 max-w-4xl mx-auto md:ml-220 p-50">
                         <h2 className="text-xl sm:text-xl md:text-2xl md:text-right lg:text-4xl text-amber-300 font-extrabold mb-4 text-center ">
                             Tworzymy nowoczesne konstrukcje aluminiowe dopasowane do Twojej wizji.

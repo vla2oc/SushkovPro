@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import "tailwindcss";
 
 body {
@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
 }
 @theme{
-  --font-display: "League Spartan","sans-serif";
+  --font-display: "Oswald","sans-serif";
 
 }
 @layer utilities {
