@@ -21,7 +21,7 @@ export default function Onas() {
             </section>
             <section className='flex justify-center px-4 md:px-10 py-20 font-display'>
                 <div className='flex-1  font-display md:max-w-7xl'>
-                    <h2 className=' text-5xl md:text-6xl font-bold flex text-center justify-center text-amber-400 mb-8'>Firma jak rodzina</h2>
+                    <h2 className=' text-5xl md:text-6xl font-bold flex text-center justify-center text-amber-400 mb-20'>Firma jak rodzina</h2>
                     <p className='md:text-xl leading-8 mb-3'>Nie jesteśmy korporacją. Nie jesteśmy przypadkową ekipą. Jesteśmy grupą ludzi, którzy przez lata pracowali razem — ramię w ramię — zanim zdecydowali się założyć własną firmę. I właśnie ta historia nas wyróżnia.</p>
                     <p className='md:text-xl leading-8 mb-3'>Założyciel naszej firmy zaczynał jako zwykły montażysta. Poznał ten zawód od podstaw, nauczył się, co naprawdę działa, i zrozumiał, że najlepsze efekty osiąga się tylko wtedy, gdy pracuje się z ludźmi, którym się ufa. Tak powstała nasza firma — w Katowicach, w 2023 roku — zbudowana nie na papierze, tylko na relacjach.</p>
                 </div>

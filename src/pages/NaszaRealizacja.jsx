@@ -1,3 +1,4 @@
+import { realizacje } from '../components/data/data_realizacja'
 import bgtoyota from '../assets/bgtoyota.jpg'
 import FeaturesWork from '../components/Layout/FeaturesWork'
 
@@ -12,8 +13,16 @@ export default function NaszaRealizacja() {
             </section>
             <div className=" font-display">
                 <h1 className=" text-5xl md:text-6xl text-center font-bold text-amber-400 flex justify-center mt-20">Nasza Realizacja</h1>
-                <div className='flex justify-center items-center mt-20 mb-30'>
-                    <FeaturesWork />
+                <div className='flex md:gap-50 mb-20 mt-10 justify-center items-center flex-col md:flex-row'>
+                    {realizacje.slice(0, 2).map(r => (
+                        <FeaturesWork
+                            key={r.id}
+                            id={r.id}
+                            title={r.title}
+                            image={r.image}
+                            location={r.location}
+                        />
+                    ))}
                 </div>
             </div>
 

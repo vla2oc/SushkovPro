@@ -12,7 +12,7 @@ export default function Slider({ slides }) {
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            className='w-[900px] h-[600px]'
+            className=' w-full h-[250px] md:w-[900px] md:h-[600px]'
             autoplay={{ delay: 2000, disableOnInteraction: false, }}
             speed={1200}
             loop={true}

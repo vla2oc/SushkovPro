@@ -1,4 +1,4 @@
-import './Hero.css'
+import { realizacje } from './data/data_realizacja'
 import Button from './Layout/Button'
 import { easeIn, easeInOut, easeOut, motion, AnimatePresence } from 'framer-motion'
 import bgToyota from '../assets/bgtoyota.jpg'
@@ -17,7 +17,7 @@ export default function Hero() {
                         <h2 className="text-xl sm:text-xl md:text-2xl md:text-right lg:text-4xl text-amber-300 font-extrabold mb-4 text-center ">
                             Tworzymy nowoczesne konstrukcje aluminiowe dopasowane do Twojej wizji.
                         </h2>
-                        <p className="text-m sm:text-base md:text-lg lg:text-xl text-amber-50 font-bold text-center md:text-right leading-relaxed">
+                        <p className="text-l  sm:text-base md:text-lg lg:text-xl text-amber-50 font-bold text-center md:text-right leading-relaxed">
                             Nasze realizacje łączą precyzję wykonania, funkcjonalność i estetykę, tworząc przestrzenie, które są trwałe, praktyczne i stylowe.
                             Współpracujemy z klientami na każdym etapie – od projektu po montaż – by dostarczyć rozwiązania, które naprawdę odpowiadają na potrzeby codziennego życia i pracy.
                         </p>
@@ -31,8 +31,15 @@ export default function Hero() {
                     <h1 className='text-5xl font-bold md:text-7xl text-amber-400 flex justify-center align-top mt-40'>Nasze Realizacje</h1>
                 </div>
                 <div className='flex md:gap-50 justify-center items-center flex-col md:flex-row '>
-                    <FeaturesWork />
-                    <FeaturesWork />
+                    {realizacje.slice(0, 2).map(r => (
+                        <FeaturesWork
+                            key={r.id}
+                            id={r.id}
+                            title={r.title}
+                            image={r.image}
+                            location={r.location}
+                        />
+                    ))}
                 </div>
                 <div className='flex justify-center mt-5 items-center'>
                     <Button title="Więcej" link='/realizacja' />

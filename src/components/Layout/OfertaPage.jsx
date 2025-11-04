@@ -25,7 +25,9 @@ export default function OfertaPage() {
                     <p className="md:text-2xl leading-8 mb-3 text-center">{oferta.subtitle}</p>
                 </div>
             </div>
-            <Slider slides={oferta.slides} />
+            <div className="mb-12">
+                <Slider slides={oferta.slides} />
+            </div>
         </>
     )
 }
