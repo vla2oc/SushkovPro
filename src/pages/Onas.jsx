@@ -34,35 +34,39 @@ export default function Onas() {
             <section className=''>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mt-12 p-5 place-items-center font-display">
                     {/* 1 */}
-                    <div className="relative max-w-xl text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3">
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
                             Działamy sprawnie i terminowo
                         </h2>
-                        <img src={line} alt="" className="hidden md:block absolute top-0 right-4 w-6 md:w-8" />
+                        <img
+                            src={line}
+                            alt=""
+                            className="hidden md:block w-8 top-10"
+                        />
                     </div>
 
                     {/* 2 */}
-                    <div className="relative max-w-xl text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3">
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
                             Nie zawyżamy kosztów
                         </h2>
-                        <img src={line} alt="" className="hidden md:block absolute bottom-12 left-120 w-6 md:w-8" />
+                        <img src={line} alt="" className="hidden md:block w-8 top-10" />
                     </div>
 
                     {/* 3 */}
-                    <div className="relative max-w-xl text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3">
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
                             Traktujemy projekt jak własny
                         </h2>
-                        <img src={line} alt="" className="hidden md:block absolute top-0 right-0 w-6 md:w-8" />
+                        <img src={line} alt="" className="hidden md:block w-8 top-10" />
                     </div>
 
                     {/* 4 */}
-                    <div className="relative max-w-xl text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-3">
                         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold">
                             Dbamy o jakość
                         </h2>
-                        <img src={line} alt="" className="hidden md:block absolute bottom-10 left-90 w-6 md:w-8" />
+                        <img src={line} alt="" className="hidden md:block w-8 top-10" />
                     </div>
                 </div>
             </section>

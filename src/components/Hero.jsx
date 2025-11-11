@@ -9,7 +9,7 @@ export default function Hero() {
 
     return (
         <>
-            <section style={{ backgroundImage: `url(${bgToyota})` }}
+            <section style={{ backgroundImage: `url(${bgToyota})`, backgroundPosition: 'center 100%' }}
                 className="relative h-screen bg-cover bg-center bg-fixed flex items-end justify-center">
                 <div id='dark-overlay' className='absolute inset-0 bg-black opacity-60  transition-opacity duration-100 z-0'></div>
                 <div className='flex flex-col relative font-display  md:top-10'>

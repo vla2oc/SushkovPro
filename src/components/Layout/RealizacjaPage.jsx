@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { realizacje } from "../data/data_realizacja"
+import Slider from "./Slider"
 
 
 export default function RealizacjaPage() {
@@ -24,8 +25,8 @@ export default function RealizacjaPage() {
                     <p className="md:text-2xl leading-8 mb-2 text-center">{projekt.subtitle}</p>
                 </div>
             </div>
-            <div className="flex justify-center ">
-                <img className="max-w-4xl w-full object-cover rounded-xl shadow-xl" src={projekt.image} alt="" />
+            <div className="flex justify-center overflow-hidden object-cover ">
+                <Slider slides={projekt.slides} />
             </div>
             <div className="flex justify-center items-center mt-8 mb-12">
                 <div className="border-2 p-4 rounded-2xl">
